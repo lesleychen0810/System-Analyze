@@ -27,7 +27,25 @@ const routes = [{
     name: '/login',
     component: () =>
         import('../components/login.vue')
-}
+},
+    {
+        path: '/profile',
+        name: '/profile',
+        component: () =>
+            import('../components/profile.vue')
+    },
+    {
+        path: '/screening',
+        name: '/screening',
+        component: () =>
+            import('../components/screening.vue')
+    },
+    {
+        path: '/vaccine',
+        name: '/vaccine',
+        component: () =>
+            import('../components/vaccine.vue')
+    },
 
 ]
 
