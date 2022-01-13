@@ -1,7 +1,19 @@
 <template>
   <div class="hello">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png" />
     <div class="main">
+      <div class="bookmark1">
+        <router-link :to="{ path: '/profile' }">個人<br />檔案</router-link>
+      </div>
+      <div class="bookmark2">
+        <router-link :to="{ path: '/screening' }">篩檢<br />資料</router-link>
+      </div>
+      <div class="bookmark3">
+        <router-link :to="{ path: '/vaccine' }"
+          >疫苗<br />施打<br />紀錄</router-link
+        >
+      </div>
+
       <div class="quarter-div blue">
         <div class="innerborder">
           <div>
@@ -15,7 +27,8 @@
                 <option>高端</option>
               </select>
             </p>
-            <p class="c">施打日期:</p><br><br><br>
+            <p class="c">施打日期:</p>
+            <br /><br /><br />
             <p class="b">
               第二劑:<select>
                 <option>請選擇疫苗品牌</option>
@@ -25,7 +38,8 @@
                 <option>高端</option>
               </select>
             </p>
-            <p class="c">施打日期:</p><br><br><br>
+            <p class="c">施打日期:</p>
+            <br /><br /><br />
             <p class="b">
               第三劑:<select>
                 <option>請選擇疫苗品牌</option>
@@ -35,7 +49,8 @@
                 <option>高端</option>
               </select>
             </p>
-            <p class="c">施打日期:</p><br><br><br>
+            <p class="c">施打日期:</p>
+            <br /><br /><br />
           </div>
         </div>
       </div>
@@ -91,6 +106,7 @@ export default {
   position: absolute;
   left: 10%;
   margin: 5%;
+  box-shadow: -7px -3px 1px grey;
 }
 
 .quarter-div {
@@ -194,13 +210,13 @@ export default {
   color: rgb(27, 16, 2);
 }
 .a {
-    position: relative;
-    margin-top: 24%;
-    margin-left: -55%;
-    color: rgb(27, 16, 2);
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 2cm;
+  position: relative;
+  margin-top: 24%;
+  margin-left: -55%;
+  color: rgb(27, 16, 2);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 2cm;
 }
 
 .b {
@@ -211,11 +227,42 @@ export default {
   font-size: 20px;
 }
 .c {
-    position: relative;
-    margin-top: 2%;
-    margin-left: -25%;
+      position: relative;
+    align-content: center;
+    margin-top: 5%;
     color: rgb(27, 16, 2);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.bookmark1 {
+  width: 3%;
+  height: 15%;
+  border-style: solid;
+  position: absolute;
+  top: 5%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
+}
+.bookmark2 {
+  width: 3%;
+  height: 15%;
+  border-style: solid;
+  position: absolute;
+  top: 23%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
+}
+.bookmark3 {
+  width: 3%;
+  height: 22%;
+  border-style: solid;
+  position: absolute;
+  top: 42%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
 }
 </style>

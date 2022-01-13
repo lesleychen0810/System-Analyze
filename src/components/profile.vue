@@ -1,7 +1,19 @@
 <template>
   <div class="hello">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png" />
     <div class="main">
+      <div class="bookmark1">
+        <router-link :to="{ path: '/profile' }">個人<br />檔案</router-link>
+      </div>
+      <div class="bookmark2">
+        <router-link :to="{ path: '/screening' }">篩檢<br />資料</router-link>
+      </div>
+      <div class="bookmark3">
+        <router-link :to="{ path: '/vaccine' }"
+          >疫苗<br />施打<br />紀錄</router-link
+        >
+      </div>
+
       <div class="quarter-div blue">
         <div class="innerborder">
           <div>
@@ -70,6 +82,7 @@ export default {
   position: absolute;
   left: 10%;
   margin: 5%;
+  box-shadow: -7px -3px 1px grey;
 }
 
 .quarter-div {
@@ -130,9 +143,8 @@ export default {
 .innerborder {
   border-width: 8px;
   border-style: dashed;
-
   padding: 5px;
-  height: 86%;
+  height: 90%;
   margin: 10%;
   background: rgba(17, 129, 204, 0.582);
   border-radius: 5%;
@@ -173,13 +185,13 @@ export default {
   color: rgb(27, 16, 2);
 }
 .a {
- position: relative;
-    margin-top: 18%;
-    margin-left: -40%;
-    color: rgb(27, 16, 2);
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 2cm;
+  position: relative;
+  margin-top: -5%;
+  margin-left: -28%;
+  color: rgb(27, 16, 2);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 2cm;
 }
 
 .b {
@@ -197,6 +209,36 @@ export default {
   color: rgb(27, 16, 2);
   font-weight: bold; /*加粗 */
   font-size: 25px;
+}
+.bookmark1 {
+  width: 3%;
+  height: 15%;
+  border-style: solid;
+  position: absolute;
+  top: 5%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
+}
+.bookmark2 {
+  width: 3%;
+  height: 15%;
+  border-style: solid;
+  position: absolute;
+  top: 23%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
+}
+.bookmark3 {
+  width: 3%;
+  height: 22%;
+  border-style: solid;
+  position: absolute;
+  top: 42%;
+  left: -4%;
+  border-radius: 10%;
+  box-shadow: -3px -2px 1px grey;
 }
 </style>
 

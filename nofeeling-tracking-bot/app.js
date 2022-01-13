@@ -2,8 +2,8 @@
 const line = require('@line/bot-sdk');
 var express = require('express');
 const config = {
-  channelAccessToken: '+Cc5kz6L2hvil43yCN+WnnvJdryC9AXDMGAx0gqX5ktAmVyoCHQBggQZ0onJ+BIvTAtcfDWngK+U7nI0PaXEq4Tvmv1aYa/azaqmvbp+psmgKJHKdiBWo6mPY31CEByPxGTAEUAQvc5ZfbkkTQL33wdB04t89/1O/w1cDnyilFU=',
-  channelSecret: 'dfca1b5f7fa0a4bd1ae97707248040fd'
+    channelAccessToken: '+Cc5kz6L2hvil43yCN+WnnvJdryC9AXDMGAx0gqX5ktAmVyoCHQBggQZ0onJ+BIvTAtcfDWngK+U7nI0PaXEq4Tvmv1aYa/azaqmvbp+psmgKJHKdiBWo6mPY31CEByPxGTAEUAQvc5ZfbkkTQL33wdB04t89/1O/w1cDnyilFU=',
+    channelSecret: 'dfca1b5f7fa0a4bd1ae97707248040fd'
 };
 // create LINE SDK client
 const client = new line.Client(config);
@@ -12,7 +12,7 @@ const client = new line.Client(config);
 // about Express itself: <https://expressjs.com/>
 
 const message = {
-    
+
     "type": "bubble",
     "hero": {
         "type": "image",
@@ -87,28 +87,28 @@ const app = express();
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
 app.post('/callback', line.middleware(config), (req, res) => {
-	console.log(req, res)
-  Promise
-    .all(req.body.events.map(handleEvent))
-    .then((result) => res.json(result))
-    .catch((err) => {
-      console.error(err);
-      res.status(500).end();
-    });
+    console.log(req, res)
+    Promise
+        .all(req.body.events.map(handleEvent))
+        .then((result) => res.json(result))
+        .catch((err) => {
+            console.error(err);
+            res.status(500).end();
+        });
 });
 // event handler
 function handleEvent(event) {
-  if (event.type !== 'message' || event.message.type !== 'text') {
-    // ignore non-text-message event
-    return Promise.resolve(null);
-  }
-  // create a echoing text message
-  const echo = { type: 'text', text: event.message.text };
-  // use reply API
-  return client.replyMessage(event.replyToken, echo);
+    if (event.type !== 'message' || event.message.type !== 'text') {
+        // ignore non-text-message event
+        return Promise.resolve(null);
+    }
+    // create a echoing text message
+    const echo = { type: 'text', text: event.message.text };
+    // use reply API
+    return client.replyMessage(event.replyToken, echo);
 }
 // listen on port
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`listening on ${port}`);
+    console.log(`listening on ${port}`);
 });

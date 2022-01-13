@@ -14,9 +14,11 @@ var linebot = require('linebot');
 // 用於辨識Line Channel的資訊
 var bot = linebot({
   channelId: '1656782189',
-  channelSecret: '6f626872423aace575f5dc2a665e010a',
-  channelAccessToken: 'g2s2BSvIX2PT6hjQkJMJkScpunFTIdm/bqumajeL/86yxp2Ier/aJaRgv66liIWgTAtcfDWngK+U7nI0PaXEq4Tvmv1aYa/azaqmvbp+psmyBop7IclDW1TYLyUVKL/XHsaxnYqud0UPcpoEDMaz0QdB04t89/1O/w1cDnyilFU='
+  channelSecret: 'dfca1b5f7fa0a4bd1ae97707248040fd',
+  channelAccessToken: '+Cc5kz6L2hvil43yCN+WnnvJdryC9AXDMGAx0gqX5ktAmVyoCHQBggQZ0onJ+BIvTAtcfDWngK+U7nI0PaXEq4Tvmv1aYa/azaqmvbp+psmgKJHKdiBWo6mPY31CEByPxGTAEUAQvc5ZfbkkTQL33wdB04t89/1O/w1cDnyilFU='
 });
+
+//在這個資料夾做一下firebase hosting的教程 你們用錯地方了 先這樣 有問題再問 謝謝
 
 // 當有人傳送訊息給Bot時
 bot.on('message', function (event) {
